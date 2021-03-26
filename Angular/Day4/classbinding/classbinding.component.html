@@ -1,0 +1,15 @@
+<p>classbinding works!</p>
+
+<h2 [class]="myclass">
+    Class Binding</h2>
+
+<h2 [class.success]="rating<4"
+    [class.danger]="rating>4"
+> Apply Class 
+Binding on Condition </h2>
+
+<!-- ngClass=> it apply multiple Css 
+    classes dynamically -->
+
+    <h2 [ngClass]="jsonobj">
+         Apply ngClass </h2>
