@@ -1,0 +1,35 @@
+<p>event-binding works!</p>
+
+<!-- syntax= > (event_name)="Method_Name()" -->
+
+<button (click)="onClick()">Click Me
+    
+</button> <br><br>
+
+<img src="../../assets/bg.jpeg" 
+alt=""  (click)="onImageClick()"> <br><br>
+
+<!-- $event=> is a special variable given by angular 
+it gives current html dom element information(json object) -->
+
+<button (click)="onClick1($event)"
+value="Event Occur!!"
+>Click</button><br><br>
+
+<!-- template reference variable -->
+
+<input #myinput type="text"
+ placeholder="Enter the Username...">
+ <br>
+ <button (click)="GetData(myinput.value)">Send</button>
+
+ <br><br>
+ <button  (click)="GetData1(myinput)">Send</button>
+<hr>
+<input #inputnum1 type="text" 
+placeholder="Enter the num1.."> <br>
+
+<input #inputnum2 type="text" 
+placeholder="Enter the number 2"> <br><br>
+<button (click)="onAddition(inputnum1.value,inputnum2.value)">Addition</button>
+<h2>Addition is :: {{result}} </h2>
