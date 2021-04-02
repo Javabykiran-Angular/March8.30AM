@@ -1,0 +1,35 @@
+<p>if-directive works!</p>
+
+<!-- structral directive => you can manupulate your dom structral,update,delete,destrioy -->
+<!-- 1 if directive
+2 for directive
+3 switch directive -->
+
+<div *ngIf="rating<4">
+    <h2>Condition is true</h2>
+</div>
+ <br><br>
+
+ <div *ngIf="rating1<4;else elsepart">
+    <h2>Condition is true</h2>
+ </div>
+<!-- <div #elsepart>
+    <h2>Condition is false</h2>
+</div> -->
+
+<ng-template #elsepart>
+    <h2>Condition is false</h2>
+</ng-template> 
+<hr>
+
+<div *ngIf="rating2<4;then mainpart else elsepart1">
+</div>
+<ng-template #mainpart>
+    <h2>You are in Main part</h2>
+</ng-template>
+
+<ng-template #elsepart1>
+    <h2>You are in Else part</h2>
+</ng-template>
+
+
