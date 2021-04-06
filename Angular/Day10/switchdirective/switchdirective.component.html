@@ -1,0 +1,20 @@
+<p>switchdirective works!</p>
+
+<input #inputcolor type="text" placeholder="Enter the Color Name..."> &nbsp;&nbsp;
+<button (click)="onClick(inputcolor.value)">Click</button>
+<hr>
+<div [ngSwitch]="choice">
+    <div *ngSwitchCase="'red'" [style.background]="choice">
+        <h2>Your Color name is {{choice}} </h2>
+    </div>
+    <div *ngSwitchCase="'green'" [style.background]="choice">
+        <h2>Your Color name is {{choice}} </h2>
+    </div>
+    <div *ngSwitchCase="'blue'" [style.background]="choice">
+        <h2>Your Color name is {{choice}} </h2>
+    </div>
+    <div *ngSwitchDefault [style.background]="choice == ''?'orange':'yellow'">
+        <h2>
+        Your Color Name is invalid {{choice}} </h2>
+    </div>
+</div>
