@@ -1,0 +1,25 @@
+<p>child1 works!</p>
+
+<h2> {{ParentData}} </h2>
+<h2> Name :: {{ParentJsonData.name}} </h2>
+<h2>ID:: {{ParentJsonData.id}} </h2>
+<h2> Post:: {{ParentJsonData.post}} </h2>
+
+<table border="1px">
+    <thead>
+        <th>Sr NO.</th>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Post</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of ParentArrObj;index as i">
+            <td> {{i+1}} </td>
+            <td> {{item.id}} </td>
+            <td> {{item.name}} </td>
+            <td> {{item.post}} </td>
+        </tr>
+    </tbody>
+</table>
+<br><br>
+<h1> {{Parentstrdata}} </h1>

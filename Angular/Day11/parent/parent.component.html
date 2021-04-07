@@ -1,0 +1,14 @@
+<p>parent works!</p>
+<hr>
+<!-- <app-child1 [ParentData]="strData" >
+
+</app-child1> -->
+
+<app-child1 [ParentJsonData]="JsonObj" 
+    [ParentArrObj]="arrObj">
+
+</app-child1>
+
+<button (click)="OnClick()">Send</button>
+<hr><hr>
+<app-child1 [Parentstrdata]="Data"></app-child1>
